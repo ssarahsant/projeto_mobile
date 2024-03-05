@@ -28,48 +28,45 @@ export function Formulario(){
         // value é o state do input é a informação que esta sendo apresentada no input é a forma de leitura
         // aletrações do state aletra o input e vise versa
         <View  style={estilos.conteiner}>
-            
-            <View style={estilos.conteinerCampos}>
-                <TextInput
-                style={estilos.campo}
-                keyboardType='default'
-                placeholder="Nome"
-                placeholderTextColor= '#000'
-                onChangeText={setNome}
-                value={nome}>
-                </TextInput>
+            <TextInput
+            style={estilos.campo}
+            keyboardType='default'
+            placeholder="Nome"
+            placeholderTextColor= '#000'
+            onChangeText={setNome}
+            value={nome}>
+            </TextInput>
 
-                <TextInput
-                style={estilos.campo}
-                keyboardType='email-address'
-                placeholder="E-mail"
-                placeholderTextColor= '#000'
-                onChangeText={setEmail}
-                value={email}>
-                </TextInput>
+            <TextInput
+            style={estilos.campo}
+            keyboardType='email-address'
+            placeholder="E-mail"
+            placeholderTextColor= '#000'
+            onChangeText={setEmail}
+            value={email}>
+            </TextInput>
 
-                <TextInput
-                style={estilos.campo}
-                placeholder="Telefone"
-                keyboardType='phone-pad'
-                placeholderTextColor= '#000'
-                onChangeText={setTelefone}
-                value={telefone}>
-                </TextInput>
-            </View>
+            <TextInput
+            style={estilos.campo}
+            placeholder="Telefone"
+            keyboardType='phone-pad'
+            placeholderTextColor= '#000'
+            onChangeText={setTelefone}
+            value={telefone}>
+            </TextInput>
 
             <TouchableOpacity
              style={estilos.botao}
              onPress={adicionarUsuario}>
                 <Text>
-                    +
+                    Adicionar
                 </Text>
             </TouchableOpacity>
         </View>
         // definição do tipo de dado que o input recebe keyboardtypoe
         // place holde isnere uma mensgaem no input
         // style atribui o estilo
-        // ON PRESS (QAUNDO O BOTÃO for clicado)
+        // ON PRESS (QUANDO O BOTÃO for clicado)
     )
 }
 
@@ -77,17 +74,10 @@ export function Formulario(){
 // padding vertical = padding bottom e top
 const estilos = StyleSheet.create ({
     conteiner: {
-        flexDirection: 'row',
-        justifyContent: 'center', 
-        alignItems: 'center',
         paddingHorizontal: 5,
         paddingVertical: 10,
         marginVertical: 10,
         backgroundColor: '#000'
-    },
-    
-    conteinerCampos: {
-        flex: 1
     },
 
     campo: {
@@ -103,12 +93,12 @@ const estilos = StyleSheet.create ({
     botao: {
         justifyContent: 'center',
         alignItems: 'center',
-        width: 60,
-        height: 170,
+        height: 50,
         backgroundColor: '#fff',
-        marginStart: 10,
+        marginVertical: 5,
         color: '#fff',
         padding: 10,
         borderRadius: 5,
+        fontSize: 16
     }
 })
