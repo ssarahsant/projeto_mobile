@@ -1,25 +1,13 @@
 import { View, StyleSheet, TextInput, TouchableOpacity, Text } from "react-native"
 import { useState } from "react"
 
-export function Formulario(){
+// recuperando a props da tela usuários para passar a função que irá adicionar o usuário na coleção
+export function Formulario({adicionar}){
 
     // states armazena dados que interage com a renderização do componete
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
     const [telefone, setTelefone] = useState('')
-
-    
-    // função para captar os valores do input com o clique do bottao
-    function adicionarUsuario(){
-        // criação de objeto
-        let novoUusario = {
-            nome: nome, // passa para o objeto o conteudo do state para ser amaznedo nesse objeto java script
-            email: email, // isso ocorre graças a propriedade de componente controlado
-            telefone: telefone
-        }
-
-        console.log(novoUusario)
-    } // para execução desse função ela será será vinculada ao botao
 
     return(
         // TextInput serve para o input de dados no aplicativo
@@ -57,7 +45,9 @@ export function Formulario(){
 
             <TouchableOpacity
              style={estilos.botao}
-             onPress={adicionarUsuario}>
+             onPress={() => adicionar(nome, email, telefone)
+             
+             }>
                 <Text>
                     Adicionar
                 </Text>
@@ -66,7 +56,9 @@ export function Formulario(){
         // definição do tipo de dado que o input recebe keyboardtypoe
         // place holde isnere uma mensgaem no input
         // style atribui o estilo
-        // ON PRESS (QUANDO O BOTÃO for clicado)
+        // ON PRESS (QUANDO O BOTÃO for clicado) 
+        //executa a função que adiciona o usuário localizada na tela usuário 
+        // que foi passado para o formulário atraves de props na nomecatura adicionar
     )
 }
 

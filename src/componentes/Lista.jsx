@@ -1,40 +1,40 @@
 // importação das funcionalidades do react native
-import { View, StyleSheet, FlatList } from "react-native"
+import { View, Text, StyleSheet, FlatList } from "react-native"
 import { Usuario } from "./Usuario"
 
 
 // export (torna disponivel para os outros componente)
 // função de criação do componente que deve possuir o mesmo nome do arquivo
-export function Lista(){
+export function Lista({colecao, remover}){
      // criação de um vetor fixo de objetos
 
      // esse vetor de objetos contém três (objetos) com a estrutura de cadastro do usuário
      // esse vetor simula a apresentação dos usuários cadastrados
      // uma lista de dados, igual a essa são comuns na estrutura de dados. isso porque os objetos em js é semelhante ao json
-     const listaUsuarios = [
-        {
-            // o campo de codigo serve para identificar unicamente cada usuário cadastrado
-            codigo: '1',
-            nome: 'Sarah', 
-            email: 'sarah@gmail.com', 
-            telefone: '(19) 12345-6789'
-        },
+     const listaUsuarios = []
+        // {
+        //     // o campo de codigo serve para identificar unicamente cada usuário cadastrado
+        //     codigo: '1',
+        //     nome: 'Sarah', 
+        //     email: 'sarah@gmail.com', 
+        //     telefone: '(19) 12345-6789'
+        // },
 
-        {
-            codigo: '2',
-            nome: 'Marlene', 
-            email: 'marlene@gmail.com', 
-            telefone: '(19) 98765-4321'
-        },
+        // {
+        //     codigo: '2',
+        //     nome: 'Marlene', 
+        //     email: 'marlene@gmail.com', 
+        //     telefone: '(19) 98765-4321'
+        // },
 
-        {
+        // {
 
-            codigo: '3',
-            nome: 'Manuella', 
-            email: 'manuella@gmail.com', 
-            telefone: '(19) 9876-6789'
-        }
-     ]
+        //     codigo: '3',
+        //     nome: 'Manuella', 
+        //     email: 'manuella@gmail.com', 
+        //     telefone: '(19) 9876-6789'
+        // }
+    
    
     // cria a estrutura ao definir a posição de cada elemento
     // criação da lista, atraves de um compoente propicio para isso
@@ -55,26 +55,32 @@ export function Lista(){
     return(
         <View>
             <FlatList
-                data={listaUsuarios}
-                keyExtractor={(item) => {item.codigo}}
+                data={colecao}
+                keyExtractor= { item => item.codigo}
                 renderItem={({item}) => (
                     <Usuario
-                    nome={item.nome}
-                    email={item.email}
-                    telefone={item.telefone}
+                        nome={item.nome}
+                        email={item.email}
+                        telefone={item.telefone}
+                        remover={() => remover(item.codigo)}
                     />
+                )}
+                ListEmptyComponent={ () => (
+                    <Text style={estilos.texto}> Nenhum usuário cadastrado</Text>
+
                 )}
             />
         </View>
     )
-
-}
+} // Dentro do compoente FlatList usa-se uma propriedade do proprio componente que espera por um calback 
 
 // estilização do componente
 const estilos = StyleSheet.create ({
     texto: {
         color: '#fff',
-        paddingTop: 24
+        paddingTop: 24,
+        textAlign: 'center',
+        fontSize: 18
     }, 
     item: {
         color: '#fff'
