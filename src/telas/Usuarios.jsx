@@ -81,6 +81,6 @@ export function Usuarios(){
 const estilos = StyleSheet.create ({
     conteiner: {
         felix: 1,
-        backgroundColor: 'black'
+        backgroundColor: '#e1e5f2'
     }
 })

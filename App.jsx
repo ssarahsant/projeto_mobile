@@ -4,6 +4,9 @@ import { StyleSheet, StatusBar, Text, View } from 'react-native';
 // importa a aplicação construida na pasta src
 import { Inicial } from './src/telas/Inicial';
 import { Usuarios } from './src/telas/Usuarios';
+import { Login } from './src/telas/Login';
+import { Cadastro } from './src/telas/Cadastro';
+import { Sobre } from './src/telas/Sobre';
 
 // ESTRUTURAÇÃO
 // Função (deve possuir o mesmo nome do arquivo)
@@ -16,7 +19,7 @@ export default function App() {
     // renderiza rtela criada na outra pasta atraves de um componente sem fechamento 
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
-      <Usuarios/>
+      <Cadastro/>
     </View>
   );
 }
@@ -37,7 +40,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000'
+    backgroundColor: '#edf2f4'
   },
 });
 // esse conjunto de estilos estão sendo aplicados na função app na primiera linha do view aatravés do comando

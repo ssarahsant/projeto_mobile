@@ -14,12 +14,12 @@ export const Cabecalho = ({titulo, subtitulo}) => {
 // ESTILIZAÇÃO DO COMPONENTE do Componente (antigo arquivo js)
 const estilos = StyleSheet.create({
     conteiner : {
-        backgroundColor: '#000',
+        backgroundColor: '#e1e5f2',
         alignItems: 'center',
         paddingVertical: 12
     },
     texto: {
-        color: '#fff',
+        color: '#2b2d42',
         fontSize: 24,
         fontWeight: '300'
     }
