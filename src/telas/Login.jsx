@@ -1,5 +1,7 @@
 import { View, StyleSheet, TextInput, TouchableOpacity, Text } from "react-native";
 import { Cabecalho } from "../componentes/Cabecalho";
+import {useState} from 'react'
+
 
 export function Login () {
     // states armazena dados que interage com a renderização do componete
@@ -47,7 +49,7 @@ const estilos = StyleSheet.create ({
         paddingHorizontal: 5,
         paddingVertical: 10,
         marginVertical: 10,
-        backgroundColor: '##e1e5f2'
+        backgroundColor: '#e1e5f2'
     },
 
     campo: {
@@ -69,7 +71,7 @@ const estilos = StyleSheet.create ({
         padding: 1,
         borderRadius: 5,
     },
-    
+
     texto: {
         color: '#fff',
         fontSize: 16

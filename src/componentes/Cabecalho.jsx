@@ -2,7 +2,7 @@
 import { StyleSheet, View, Text } from "react-native"
 
 // criar com o mesmo nome do arquivo
-export const Cabecalho = ({titulo, subtitulo}) => {
+export const Cabecalho = ({titulo}) => {
     return (
         // o compomnente view é um conteinr que aramznea os demais componentes
         <View style={estilos.conteiner}>
@@ -20,7 +20,7 @@ const estilos = StyleSheet.create({
     },
     texto: {
         color: '#2b2d42',
-        fontSize: 24,
+        fontSize: 28,
         fontWeight: '300'
     }
 })

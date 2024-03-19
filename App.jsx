@@ -19,7 +19,7 @@ export default function App() {
     // renderiza rtela criada na outra pasta atraves de um componente sem fechamento 
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
-      <Cadastro/>
+      <Inicial/>
     </View>
   );
 }
@@ -40,7 +40,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#edf2f4'
+    backgroundColor: '#e1e5f2'
   },
 });
 // esse conjunto de estilos estão sendo aplicados na função app na primiera linha do view aatravés do comando

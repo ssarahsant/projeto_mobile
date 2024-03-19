@@ -80,7 +80,7 @@ export function Usuarios(){
 
 const estilos = StyleSheet.create ({
     conteiner: {
-        felix: 1,
-        backgroundColor: '#e1e5f2'
+        flex: 1, 
+        backgroundColor: '#edf2f4'
     }
 })

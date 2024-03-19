@@ -2,7 +2,7 @@
 // todos componetes que forem usados na tea deverão ser importados 
 // o componete view é um container/div que possui os demais componentes
 // dentro do return tem a função que rerona os componentes
-import { StyleSheet, View, Text } from "react-native"
+import { StyleSheet, View } from "react-native"
 
 
 import { Cabecalho } from "../componentes/Cabecalho"
@@ -16,8 +16,8 @@ export function Inicial () {
         //inserida na função de criação do componente
         <View style={estilos.conteiner}>
             <Cabecalho 
-            titulo="Senai Roberto Mange"
-            subtitulo="2° DS"/>
+            titulo="Senai Roberto Mange"/>
+
             <Botao texto="Usuários"/>
             <Botao texto="Sensores"/>
             <Botao texto="Sobre"/>

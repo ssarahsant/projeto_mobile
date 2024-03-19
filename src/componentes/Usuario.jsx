@@ -27,7 +27,7 @@ const estilos = StyleSheet.create ({
     },
     conteinerDados: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#e1e5f2',
         borderRadius: 5,
         padding: 5,
         paddingHorizontal: 10
@@ -41,10 +41,11 @@ const estilos = StyleSheet.create ({
         justifyContent: 'center',
         alignItems: 'center',
         marginStart: 10,
-        backgroundColor: '#fff',
+        backgroundColor: '#3a506b',
         borderRadius: 5,
     },
     textoBotao: {
-        fontSize: 30
+        fontSize: 40,
+        color: '#fff'
     }
 })

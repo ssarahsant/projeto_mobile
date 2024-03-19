@@ -77,7 +77,7 @@ export function Lista({colecao, remover}){
 // estilização do componente
 const estilos = StyleSheet.create ({
     texto: {
-        color: '#fff',
+        color: '#000',
         paddingTop: 24,
         textAlign: 'center',
         fontSize: 18

@@ -20,7 +20,7 @@ export function Formulario({adicionar}){
             style={estilos.campo}
             keyboardType='default'
             placeholder="Nome"
-            placeholderTextColor= '#000'
+            placeholderTextColor= '#fff'
             onChangeText={setNome}
             value={nome}>
             </TextInput>
@@ -29,7 +29,7 @@ export function Formulario({adicionar}){
             style={estilos.campo}
             keyboardType='email-address'
             placeholder="E-mail"
-            placeholderTextColor= '#000'
+            placeholderTextColor= '#fff'
             onChangeText={setEmail}
             value={email}>
             </TextInput>
@@ -38,7 +38,7 @@ export function Formulario({adicionar}){
             style={estilos.campo}
             placeholder="Telefone"
             keyboardType='phone-pad'
-            placeholderTextColor= '#000'
+            placeholderTextColor= '#fff'
             onChangeText={setTelefone}
             value={telefone}>
             </TextInput>
@@ -48,7 +48,7 @@ export function Formulario({adicionar}){
              onPress={() => adicionar(nome, email, telefone)
              
              }>
-                <Text>
+                <Text style={estilos.texto}>
                     Adicionar
                 </Text>
             </TouchableOpacity>
@@ -69,14 +69,13 @@ const estilos = StyleSheet.create ({
         paddingHorizontal: 5,
         paddingVertical: 10,
         marginVertical: 10,
-        backgroundColor: '#000'
     },
 
     campo: {
         height: 50,
-        backgroundColor: '#fff',
+        backgroundColor: '#7389ae',
         marginVertical: 5,
-        color: '#000',
+        color: '#fff',
         padding: 10,
         borderRadius: 5,
         fontSize: 16
@@ -86,11 +85,15 @@ const estilos = StyleSheet.create ({
         justifyContent: 'center',
         alignItems: 'center',
         height: 50,
-        backgroundColor: '#fff',
+        backgroundColor: '#3a506b',
         marginVertical: 5,
-        color: '#fff',
         padding: 10,
         borderRadius: 5,
+        fontSize: 16
+    },
+
+    texto: {
+        color: '#fff',
         fontSize: 16
     }
 })
